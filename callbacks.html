@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Callback Demo</title>
+		<script type="text/javascript" src="JQueryLib.js"></script>
+		<script type="text/javascript">
+
+			var counter = 0;
+
+			function appendToDiv(param)
+			{
+				$("#parent-div").prepend("<div>Hello #" + counter + "</div>");
+				counter++;
+			}
+			function stopAppends(param)
+			{
+				appendToDiv();
+				clearInterval(intervalNum);
+			}
+
+
+			$(document).ready(function(){
+			appendToDiv();
+			});
+
+			var timeOutStop = setTimeout(stopAppends, 5000);
+			var intervalNum = setInterval(appendToDiv, 100);
+	</script>
+</head>
+<body>
+	<div id='parent-div'>
+	</div>
+
+</body>
+</html>

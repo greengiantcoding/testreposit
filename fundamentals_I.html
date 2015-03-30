@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Fundamentals Part I</title>
+	<script type="text/javascript">
+		
+		var arrayX = [3,5,'Dojo', 'rocks', {name:'Michael', title:'Sensei'}];
+		console.log(arrayX);
+
+		for(index in arrayX)
+		{
+			console.log(arrayX[index] + ":" + typeof(arrayX[index]));
+		}
+		arrayX.push(100); //push 100 into arrayX
+		var arrayY = []; //define arrayY as an empty array
+		arrayX.push(arrayY); //add new array to arrayX
+		console.log(arrayX); 
+
+		var sum = 0;
+		for(var idx = 1; idx <= 500; idx++)
+		{
+			sum += idx;
+		}
+		console.log(sum);
+
+		var sum2 = 0;
+		var start = new Date();
+		for(var idx = 1; idx <= 1000000; idx++)
+		{
+			sum2 += idx;
+		}
+		var end = new Date();
+		console.log(sum2);
+		console.log((end - start)/1000000);
+		
+
+
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>

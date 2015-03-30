@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Fundamentals Part I</title>
+	<script type="text/javascript">
+		var x = [1,2,-4,-7,8,12,90, -255, 0];
+		console.log(x);
+
+		function selectSort(arr)
+		{
+			for(var idx = 0; idx < x.length - 1; idx++)
+			{
+				var min = idx;
+				for(var innerIdx = idx + 1; innerIdx < x.length; innerIdx++)
+				{
+					if(arr[innerIdx] < arr[min])
+					{
+						min = innerIdx;
+					}
+				}
+				var temp = arr[min];
+				arr[min] = arr[idx];
+				arr[idx] = temp;
+			}
+		}
+		selectSort(x);
+		console.log(x);
+
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>
